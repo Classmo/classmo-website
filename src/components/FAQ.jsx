@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
 import ScrollReveal from './ScrollReveal'
+import { WEB_APP_URL } from '../constants/links'
 import '../styles/faq.css'
 
 const faqs = [
@@ -26,7 +27,7 @@ const faqs = [
     answer: (
       <>
         Oui! Classmo est disponible sur Android, iOS et sur{' '}
-        <a href="https://app.classmo.ca" target="_blank" rel="noopener noreferrer">la version web</a>.
+        <a href={WEB_APP_URL} target="_blank" rel="noopener noreferrer">la version web</a>.
       </>
     ),
   },

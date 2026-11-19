@@ -23,29 +23,6 @@
   font-weight: 300;
 }
 
-.cta-badges {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
-.cta-badge-link {
-  display: block;
-  transition: opacity 0.2s;
-}
-
-.cta-badge-link:hover {
-  opacity: 0.8;
-}
-
-.cta-badge-img {
-  height: 58px;
-  width: auto;
-}
-
-@media (min-width: 768px) {
-  .cta-badge-img {
-    height: 78px;
-  }
+.cta .app-buttons {
+  margin-inline: auto;
 }
