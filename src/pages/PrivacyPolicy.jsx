@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
     <div className="legal-page">
       <div className="legal-container legal-section">
         <h1 className="legal-title">Politique de confidentialité</h1>
-        <p className="legal-subtitle">Dernière mise à jour : 23 février 2026</p>
+        <p className="legal-subtitle">Dernière mise à jour : 19 novembre 2026</p>
 
         <Link to="/terms" className="legal-nav-link">
           Conditions d'utilisation &rarr;
@@ -233,7 +233,7 @@ export default function PrivacyPolicy() {
         </div>
 
         <div className="legal-footer">
-          <p>&copy; 2025-2026 Classmo (MonLivreCegep). Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear() - 1} - {new Date().getFullYear()} Classmo (MonLivreCegep). Tous droits réservés.</p>
         </div>
       </div>
     </div>
