@@ -22,7 +22,7 @@ export default function Terms() {
         </Link>
 
         <h1 className="legal-title">Conditions d'utilisation</h1>
-        <p className="legal-subtitle">Dernière mise à jour : 22 février 2026</p>
+        <p className="legal-subtitle">Dernière mise à jour : 19 novembre 2026</p>
 
         <div className="legal-highlight">
           <p>
@@ -238,7 +238,7 @@ export default function Terms() {
         </div>
 
         <div className="legal-footer">
-          <p>&copy; 2025-2026 Classmo (MonLivreCegep). Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear() - 1} - {new Date().getFullYear()} Classmo (MonLivreCegep). Tous droits réservés.</p>
         </div>
       </div>
     </div>
