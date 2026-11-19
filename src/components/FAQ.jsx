@@ -23,7 +23,12 @@ const faqs = [
   },
   {
     question: 'L\'application est disponible sur Android?',
-    answer: 'Oui! Classmo est disponible sur Android, iOS et sur <a href="https://app.classmo.ca" target="_blank">la version web</a>.',
+    answer: (
+      <>
+        Oui! Classmo est disponible sur Android, iOS et sur{' '}
+        <a href="https://app.classmo.ca" target="_blank" rel="noopener noreferrer">la version web</a>.
+      </>
+    ),
   },
   {
     question: 'Je dois être étudiant pour utiliser Classmo?',
