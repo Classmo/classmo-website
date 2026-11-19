@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: 'L\'application est disponible sur Android?',
-    answer: 'Pour le moment, Classmo est disponible uniquement sur iOS (iPhone). Une version Android est prévue prochainement.',
+    answer: 'Oui! Classmo est disponible sur Android, iOS et sur <a href="https://app.classmo.ca" target="_blank">la version web</a>.',
   },
   {
     question: 'Je dois être étudiant pour utiliser Classmo?',
