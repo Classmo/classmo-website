@@ -13,7 +13,7 @@ import Blog from './pages/Blog'
 import BlogPost from './pages/blog/BlogPost'
 import Download from './pages/Download'
 import useDocumentMeta from './hooks/useDocumentMeta'
-import AdminRedirect from './pages/AdminRedirect'
+import AdminRedirect, { isAdminPath } from './pages/AdminRedirect'
 
 function LandingPage() {
   useDocumentMeta({
@@ -36,8 +36,7 @@ function LandingPage() {
 export default function App() {
   const location = useLocation()
 
-  // The admin panel moved to the web app (app.classmo.ca/admin).
-  if (location.pathname.startsWith('/admin')) {
+  if (isAdminPath(location.pathname)) {
     return <AdminRedirect />
   }
 
