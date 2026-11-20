@@ -27,9 +27,6 @@ jobs:
 
       - run: npm ci
       - run: npm run build
-        env:                                                   
-          VITE_API_URL: ${{ secrets.VITE_API_URL }}
-          VITE_ADMIN_ROLE: ${{ secrets.VITE_ADMIN_ROLE }}
       - name: SPA fallback for GitHub Pages
         run: cp dist/index.html dist/404.html
 

@@ -13,12 +13,7 @@ import Blog from './pages/Blog'
 import BlogPost from './pages/blog/BlogPost'
 import Download from './pages/Download'
 import useDocumentMeta from './hooks/useDocumentMeta'
-import { AuthProvider } from './admin/context/AuthContext'
-import AdminLogin from './admin/pages/AdminLogin'
-import Dashboard from './admin/pages/Dashboard'
-import Reports from './admin/pages/Reports'
-import Users from './admin/pages/Users'
-import ProtectedRoute from './admin/components/ProtectedRoute'
+import AdminRedirect from './pages/AdminRedirect'
 
 function LandingPage() {
   useDocumentMeta({
@@ -39,26 +34,11 @@ function LandingPage() {
 }
 
 export default function App() {
-    const location = useLocation()
+  const location = useLocation()
 
+  // The admin panel moved to the web app (app.classmo.ca/admin).
   if (location.pathname.startsWith('/admin')) {
-    return (
-      <AuthProvider>
-        <Routes>
-          <Route path="/admin/login" element={<AdminLogin />} />
-          <Route path="/admin/dashboard" element={
-            <ProtectedRoute><Dashboard /></ProtectedRoute>
-          } />
-          <Route path="/admin/reports" element={
-            <ProtectedRoute><Reports /></ProtectedRoute>
-          } />
-          <Route path="/admin/users" element={
-            <ProtectedRoute><Users /></ProtectedRoute>
-          } />
-          <Route path="/admin/*" element={<Navigate to="/admin/login" replace />} />
-        </Routes>
-      </AuthProvider>
-    )
+    return <AdminRedirect />
   }
 
   if (location.pathname === '/download') {
