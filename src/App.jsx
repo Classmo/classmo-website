@@ -13,9 +13,7 @@ import Blog from './pages/Blog'
 import BlogPost from './pages/blog/BlogPost'
 import Download from './pages/Download'
 import useDocumentMeta from './hooks/useDocumentMeta'
-
-// Same match as the redirect script in index.html: /admin and /admin/…, not /administrateur.
-const ADMIN_PATH = /^\/admin(\/|$)/
+import AdminRedirect, { isAdminPath } from './pages/AdminRedirect'
 
 function LandingPage() {
   useDocumentMeta({
@@ -38,10 +36,8 @@ function LandingPage() {
 export default function App() {
   const location = useLocation()
 
-  // /admin is redirected to app.classmo.ca/admin by a script in index.html,
-  // before React starts: render nothing here (no flash of the home page).
-  if (ADMIN_PATH.test(location.pathname)) {
-    return null
+  if (isAdminPath(location.pathname)) {
+    return <AdminRedirect />
   }
 
   if (location.pathname === '/download') {
